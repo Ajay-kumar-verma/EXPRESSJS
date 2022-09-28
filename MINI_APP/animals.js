@@ -4,7 +4,8 @@ const router = express.Router()
 const name="ANIMALS"; 
 
 router.get("/",(req,res)=>{
-    res.send(`${name} ${req.url}Get `);
+     const msg=`${name} ${req.url}Get time at ${req.requestTime}IP ${req.ip}` 
+    res.send(msg);
 console.log(`${name} ${req.url}Get `)
 })
 
